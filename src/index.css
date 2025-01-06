@@ -1,0 +1,8 @@
+/* Set padding and margin to 0 for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
