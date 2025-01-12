@@ -9,8 +9,6 @@ function Contact() {
   const [contactInfo, setContactInfo] = useState(null);
   const [loading, setLoading] = useState(true); // Optional loading state
 
-  const baseUrl = "http://localhost:5000/api";
-
   useEffect(() => {
     api
       .get(`/contact`)

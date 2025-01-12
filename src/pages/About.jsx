@@ -21,11 +21,9 @@ function AboutUs() {
   const [aboutData, setAboutData] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  const baseUrl = "http://localhost:5000/api";
-
   useEffect(() => {
     api
-      .get(`${baseUrl}/about`)
+      .get(`/about`)
       .then((response) => {
         setAboutData(response.data);
         setLoading(false);

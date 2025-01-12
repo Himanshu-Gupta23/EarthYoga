@@ -15,10 +15,9 @@ function Services() {
   const [loading, setLoading] = useState(true);
 
   // Fetch services from the backend
-  const baseUrl = "http://localhost:5000/api";
   useEffect(() => {
     api
-      .get(`${baseUrl}/services`)
+      .get(`/services`)
       .then((response) => {
         const data = response.data; // The actual data from the response
 
