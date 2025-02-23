@@ -44,6 +44,7 @@ const ResponsiveNavbar = () => {
     if (storedUser) {
       const parsedUser = JSON.parse(storedUser); // Parse the stored JSON object
       setUserName(parsedUser.name); // Set userName if found in parsed object
+      console.log("User", parsedUser);
       setRole(parsedUser.role); // Set role if found in parsed object
     }
     setLoading(false); // Set loading to false after checking the user
@@ -102,27 +103,25 @@ const ResponsiveNavbar = () => {
               flexGrow: 1,
             }}
           >
-
-<img
-            src="./logo.svg"
-            alt="logo"
-            style={{
-              height: "auto",
-              maxHeight: "5vh",
-              objectFit: "contain",
-              marginRight: "10px",
-            }}
-          />
-          <Typography
-            variant="h6"
-            sx={{
-              fontWeight: "bold",
-              fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" }, // Responsive font size
-            }}
-          >
-            Earth Yoga
-          </Typography>
-           
+            <img
+              src="./logo.svg"
+              alt="logo"
+              style={{
+                height: "auto",
+                maxHeight: "5vh",
+                objectFit: "contain",
+                marginRight: "10px",
+              }}
+            />
+            <Typography
+              variant="h6"
+              sx={{
+                fontWeight: "bold",
+                fontSize: { xs: "1.5rem", sm: "1.75rem", md: "2rem" }, // Responsive font size
+              }}
+            >
+              Earth Yoga
+            </Typography>
           </Box>
 
           {/* Buttons for Larger Screens */}
@@ -145,6 +144,9 @@ const ResponsiveNavbar = () => {
             <Button color="inherit" component={Link} to="/sessions">
               Classes
             </Button>
+            <Button color="inherit" component={Link} to="/gallery">
+              Gallery
+            </Button>
             {/* Admin Links visible only if the user is an admin */}
             {role === "admin" && (
               <>
@@ -153,6 +155,9 @@ const ResponsiveNavbar = () => {
                 </Button>
                 <Button color="inherit" component={Link} to="/user-management">
                   User Management
+                </Button>
+                <Button color="inherit" component={Link} to="/uploadImage">
+                  Upload images
                 </Button>
               </>
             )}

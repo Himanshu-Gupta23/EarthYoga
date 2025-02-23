@@ -9,14 +9,16 @@ const ProfilePage = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    const storedUser = localStorage.getItem("user");
+    const parsedUser = JSON.parse(storedUser); // Retrieve user object from localStorage
     api
-      .get("/user/profile")
+      .get(`/user/profile`)
       .then((response) => {
         setUserData(response.data); // Set the user data received from the API
         setLoading(false);
       })
       .catch((error) => {
-        console.error("Error fetching user profile data:", error);
+        console.error("Error fetching user profile data:", error  );
         setError("Failed to fetch user data");
         setLoading(false);
       });

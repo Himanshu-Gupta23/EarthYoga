@@ -20,6 +20,8 @@ import SignupPage from "./pages/auth/SignupPage"; // Import the SignupPage
 import ProfilePage from "./pages/profile/ProfilePage";
 import AdminSessionManagement from "./pages/session/admin/sessionManagement";
 import UserManagement from "./pages/admin/userManagement";
+import Gallery from "./pages/Portfolio";
+import UploadImage from "./pages/session/UploadImage";
 
 function App() {
   // Check if the user is logged in (e.g., token exists in localStorage)
@@ -58,6 +60,8 @@ function App() {
             <Route path="/signup" element={<SignupPage />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/Gallery" element={<Gallery />} />
+            <Route path="/UploadImage" element={<UploadImage />} />
 
             {/* Protected Routes - Only accessible if logged in */}
             <Route
