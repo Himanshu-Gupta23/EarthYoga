@@ -272,6 +272,14 @@ const ResponsiveNavbar = () => {
             <ListItem disablePadding>
               <ListItemButton
                 component={Link}
+                to="/gallery"
+                onClick={handleDrawerToggle}
+              ><ListItemText primary="Gallery" />
+              </ListItemButton>
+            </ListItem>
+            <ListItem disablePadding>
+              <ListItemButton
+                component={Link}
                 to="/sessions"
                 onClick={handleDrawerToggle}
               >
@@ -297,6 +305,15 @@ const ResponsiveNavbar = () => {
                     onClick={handleDrawerToggle}
                   >
                     <ListItemText primary="User Management" />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton
+                    component={Link}
+                    to="/uploadImage"
+                    onClick={handleDrawerToggle}
+                  >
+                    <ListItemText primary="Upload Image" />
                   </ListItemButton>
                 </ListItem>
               </>
