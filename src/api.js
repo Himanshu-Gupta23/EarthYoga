@@ -3,9 +3,9 @@ import axios from "axios";
 
 // Create Axios instance
 const api = axios.create({
-  // baseURL: "https://yoga-zgab.onrender.com/api",
+  baseURL: "https://yoga-zgab.onrender.com/api",
   // // Replace with your API base URL
-  baseURL: "http://localhost:5000/api",
+  // baseURL: "http://localhost:5000/api",
 });
 
 // Add request interceptor to include the auth token
